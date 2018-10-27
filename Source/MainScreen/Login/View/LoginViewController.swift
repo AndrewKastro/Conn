@@ -76,7 +76,7 @@ extension LoginViewController {
 extension LoginViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-        let _ = textField.accessibilityIdentifier == identifierUsername ? self.presenter.validateFieldsAndSet(self.usernameTextField.text!, identifierUsername) : self.presenter.validateFieldsAndSet(self.passwordTextField.text!, identifierPassword)
+        self.presenter.validateFieldsAndSet(textField.text!, textField.accessibilityIdentifier!)
     }
 }
 

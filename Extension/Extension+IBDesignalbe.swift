@@ -131,3 +131,16 @@ extension UIViewController {
         button.backgroundColor = enabled ? UIColor(red: 80/255, green: 227/255, blue: 194/255, alpha: 1.0) : UIColor.gray
     }
 }
+
+extension String {
+    func isValidEmail(_ email:String) -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        
+        let emailValid = NSPredicate(format:"SELF MATCHES %@", emailRegex)
+        return emailValid.evaluate(with: email)
+    }
+    
+    public func insert(string:String,index:Int) -> String {
+        return  String(self.prefix(index)) + string + String(self.suffix(self.count-index))
+    }
+}

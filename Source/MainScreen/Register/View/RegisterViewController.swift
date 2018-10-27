@@ -18,6 +18,7 @@ protocol RegisterViewControllerDelegate {
 
 class RegisterViewController: UIViewController {
     
+    @IBOutlet weak var viewRegister: UIView!
     @IBOutlet weak var stackViewRegister: UIStackView!
     @IBOutlet weak var stackViewButton: UIStackView!
     @IBOutlet weak var usernameTextField: UITextField!
@@ -28,6 +29,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var cancelRegister: UIButton!
     
     var delegate:RegisterViewControllerDelegate?
+    var viewDataRegister:TextFieldsViewDataRegister?
     
     let presenter = RegisterPresenter()
     let username = "username"
@@ -55,6 +57,7 @@ extension RegisterViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.presenter.attach(view: self)
         self.hideKeyboardWhenTappedAround()
     }
     
@@ -64,23 +67,44 @@ extension RegisterViewController {
     }
 }
 
+extension RegisterViewController {
+    func enabledButton(_ enabled:Bool) {
+        self.createRegister.isEnabled = enabled
+        self.viewRegister.reloadInputViews()
+    }
+}
+
 extension RegisterViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-        switch textField.accessibilityIdentifier {
-        case self.username:
-            self.presenter.teste(usernameTextField.text!)
-            break
-        case self.password:
-            self.presenter.teste(passwordTextField.text!)
-            break
-        case self.email:
-            self.presenter.teste(emailTextField.text!)
-            break
-        default:
-            self.presenter.teste(zipCode.text!)
-            break
-        }
+        self.presenter.validateFieldsAndSet(textField.text!, textField.accessibilityIdentifier!)
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if zipCode.tag == textField.tag {
+            let currentText = textField.text ?? ""
+            guard let stringRange = Range(range, in: currentText) else { return false }
+            let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+            if updatedText.count == 6 && !currentText.contains("-"){
+                textField.text = currentText.insert(string: "-", index: 5)
+                return true
+            }
+            return updatedText.count < 10
+        }
+        return true
+    }
+}
+
+extension RegisterViewController: RegisterPresenterDelegate {
+    func getValuesAndSet(_ viewData: TextFieldsViewDataRegister) {
+        self.viewDataRegister = viewData
+        self.enabledButton(true)
+        self.colorEnabledButton(true, self.createRegister)
+    }
+    
+    func setError() {
+        self.enabledButton(true)
+        self.colorEnabledButton(false, self.createRegister)
+    }
+ 
 }

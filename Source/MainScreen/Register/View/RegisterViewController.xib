@@ -19,6 +19,7 @@
                 <outlet property="stackViewRegister" destination="TMZ-tI-xij" id="xvz-Kx-pLA"/>
                 <outlet property="usernameTextField" destination="vnC-Pg-rd3" id="K0G-cJ-ccF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewRegister" destination="8eO-OG-A9I" id="aal-Rb-TNv"/>
                 <outlet property="zipCode" destination="uUB-Pz-ZKG" id="Q2R-d4-rNh"/>
             </connections>
         </placeholder>
@@ -85,7 +86,7 @@
                                             </constraints>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             <connections>
                                                 <outlet property="delegate" destination="-1" id="vKq-iv-zj8"/>
                                             </connections>
@@ -142,7 +143,7 @@
                                                 <constraint firstAttribute="width" constant="20" id="Jb0-gn-35Q"/>
                                             </constraints>
                                         </imageView>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ZIP Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uUB-Pz-ZKG">
+                                        <textField opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ZIP Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uUB-Pz-ZKG">
                                             <rect key="frame" x="28" y="0.0" width="188" height="20"/>
                                             <accessibility key="accessibilityConfiguration" identifier="zipcode"/>
                                             <constraints>

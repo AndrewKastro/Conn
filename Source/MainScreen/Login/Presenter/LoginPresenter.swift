@@ -30,8 +30,19 @@ class LoginPresenter {
 
 extension LoginPresenter {
     
+    func setPassword(_ field:String) {
+        self.fieldsViewData.password = field
+    }
+    
+    func setUsername(_ field:String) {
+        self.fieldsViewData.username = field
+    }
+}
+
+extension LoginPresenter {
+    
     public func validateFieldsAndSet(_ field:String, _ identifier:String) {
-        self.verifyIdentifier(field, identifier)
+        self.verifyIdentifierAndSet(field, identifier)
         if !self.fieldsViewData.username.isEmpty, !self.fieldsViewData.password.isEmpty {
             self.delegate?.validateFields(fieldsViewData)
         }else {
@@ -39,14 +50,7 @@ extension LoginPresenter {
         }
     }
     
-    func verifyIdentifier(_ field:String, _ identifier:String) {
-        switch identifier {
-        case "username":
-            self.fieldsViewData.username = field
-            break
-        default:
-            self.fieldsViewData.password = field
-            break
-        }
+    func verifyIdentifierAndSet(_ field:String, _ identifier:String) {
+        let _ = identifier == "username" ? self.setUsername(field) : self.setPassword(field)
     }
 }
