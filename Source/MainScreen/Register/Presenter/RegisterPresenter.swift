@@ -8,10 +8,16 @@
 
 import Foundation
 
+//MARK: - REGISTER PRESENTER DELEGATE -
+
 protocol RegisterPresenterDelegate {
     func getValuesAndSet(_ viewData:TextFieldsViewDataRegister)
     func setError()
+    func successCreatingUser()
+    func errorCreatingUser()
 }
+
+//MARK: - STRUCT VIEW DATA -
 
 struct TextFieldsViewDataRegister {
     var username = ""
@@ -20,16 +26,22 @@ struct TextFieldsViewDataRegister {
     var zipcode = ""
 }
 
+//MARK: - CLASS, LETS, VARIABLES & FUNCTIONS -
+
 class RegisterPresenter {
     
     var delegate:RegisterPresenterDelegate?
     var fieldsViewData = TextFieldsViewDataRegister()
     var fields = [TextFieldsViewDataRegister]()
     
+    let service = FirebaseService()
+    
     func attach(view:RegisterPresenterDelegate){
         self.delegate = view
     }
 }
+
+//MARK: - AUX FUNCTIONS, VALIDATE FIELDS -
 
 extension RegisterPresenter {
     
@@ -39,7 +51,7 @@ extension RegisterPresenter {
     }
     
     func verifyProperties() {
-        if !self.fieldsViewData.username.isEmpty, !self.fieldsViewData.password.isEmpty, !self.fieldsViewData.email.isEmpty, !self.fieldsViewData.zipcode.isEmpty, self.fieldsViewData.email.isValidEmail(self.fieldsViewData.email) {
+        if !self.fieldsViewData.username.isEmpty, !self.fieldsViewData.password.isEmpty, self.fieldsViewData.password.count >= 8, !self.fieldsViewData.email.isEmpty, !self.fieldsViewData.zipcode.isEmpty, self.fieldsViewData.email.isValidEmail(self.fieldsViewData.email) {
             self.delegate?.getValuesAndSet(self.fieldsViewData)
         }else {
             self.delegate?.setError()
@@ -62,4 +74,18 @@ extension RegisterPresenter {
             break
         }
     }
+}
+
+//MARK: - REGISTRATION FUNCTIONS -
+
+extension RegisterPresenter {
+    
+    func callRegistrationService() {
+        self.service.createUser(email: self.fieldsViewData.email, password: self.fieldsViewData.password, userName: self.fieldsViewData.username, errorCompletion: { (error) in
+            self.delegate?.errorCreatingUser()
+        }, successCompletion: { (success) in
+            self.delegate?.successCreatingUser()
+        })
+    }
+    
 }

@@ -1,0 +1,6 @@
+framework module Pods_Conn {
+  umbrella header "Pods-Conn-umbrella.h"
+
+  export *
+  module * { export * }
+}

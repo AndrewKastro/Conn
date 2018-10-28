@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
     let identifierUsername = "username"
     let identifierPassword = "password"
     let presenter = LoginPresenter()
+    let service = FirebaseService()
     
     var delegate:LoginViewControllerDelegate?
     var viewData:TextFieldsViewDataLogin?
@@ -55,7 +56,7 @@ extension LoginViewController {
 extension LoginViewController {
 
     @IBAction func actionLogin(_ sender: Any) {
-        
+        self.presenter.signInUser()
     }
     
     @IBAction func actionCancelLogin(_ sender: Any) {
@@ -81,6 +82,13 @@ extension LoginViewController: UITextFieldDelegate {
 }
 
 extension LoginViewController: LoginPresenterDelegate {
+    func successLogin() {
+        print("FFFF APRESENTAR A TELA DE LOGIN")
+    }
+    
+    func failLogin() {
+        self.toastMessage("Email ou senha inválidos!!")
+    }
     
     func validateFields(_ viewDataLogin:TextFieldsViewDataLogin) {
         self.viewData = viewDataLogin

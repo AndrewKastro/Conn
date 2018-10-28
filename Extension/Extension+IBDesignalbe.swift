@@ -130,6 +130,16 @@ extension UIViewController {
     func colorEnabledButton(_ enabled:Bool, _ button:UIButton) {
         button.backgroundColor = enabled ? UIColor(red: 80/255, green: 227/255, blue: 194/255, alpha: 1.0) : UIColor.gray
     }
+    
+    func toastMessage(_ message:String) {
+        let message = message
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        self.present(alert, animated: true)
+        let duration: Double = 2.5
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
+            alert.dismiss(animated: true)
+        }
+    }
 }
 
 extension String {

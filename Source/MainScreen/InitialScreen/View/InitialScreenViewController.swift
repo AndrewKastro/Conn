@@ -95,9 +95,20 @@ extension InitialScreenViewController {
 //MARK: - DELEGATES -
 
 extension InitialScreenViewController: RegisterViewControllerDelegate {
-    func cancelRegister() {
+    
+    func successRegister() {
         self.deleteAllSubViewsIfNeeded()
         self.animateComponents(self.titlePage, self.firstGenericButton, self.secondGenericButton)
+        self.toastMessage("Conta criada com sucesso!")
+    }
+    
+    func failRegister(_ context:Bool) {
+        if !context{
+            self.deleteAllSubViewsIfNeeded()
+            self.animateComponents(self.titlePage, self.firstGenericButton, self.secondGenericButton)
+        }else {
+            self.toastMessage("Erro ao criar conta. \n Tente novamente!!")
+        }
     }
 }
 

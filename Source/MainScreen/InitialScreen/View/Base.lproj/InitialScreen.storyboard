@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,18 +14,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="InitialScreenViewController" customModule="Conn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GradientView" customModule="Conn" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="xwZ-0f-Fip">
-                                <rect key="frame" x="147.66666666666666" y="67" width="80" height="80"/>
+                                <rect key="frame" x="120" y="36.5" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="h3T-NZ-T7T"/>
                                     <constraint firstAttribute="height" constant="80" id="nXu-Hb-GoA"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtx-F0-ZaC">
-                                <rect key="frame" x="149" y="157.33333333333334" width="77" height="36"/>
+                                <rect key="frame" x="121.5" y="127" width="77" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="MBg-CH-R81"/>
                                     <constraint firstAttribute="width" constant="77" id="wHk-EU-YkO"/>
@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ED-9j-WuA">
-                                <rect key="frame" x="64" y="659" width="247" height="38"/>
+                                <rect key="frame" x="64" y="471" width="192" height="38"/>
                                 <color key="backgroundColor" red="0.31372549019607843" green="0.8901960784313725" blue="0.76078431372549016" alpha="0.39164282570422537" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="1YJ-mI-h7Z"/>
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQL-CL-IYB">
-                                <rect key="frame" x="64" y="709" width="247" height="38"/>
+                                <rect key="frame" x="64" y="515" width="192" height="38"/>
                                 <color key="backgroundColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="0.39164282569999997" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="ChK-Ds-QUY"/>
@@ -73,10 +73,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aiR-zp-Gij">
-                                <rect key="frame" x="40" y="215.33333333333334" width="295" height="388.66666666666663"/>
+                                <rect key="frame" x="40" y="173" width="240" height="288"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="VT5-aK-MOe">
-                                        <rect key="frame" x="0.0" y="0.0" width="295" height="388.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="288"/>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,16 +90,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mQL-CL-IYB" firstAttribute="top" secondItem="0ED-9j-WuA" secondAttribute="bottom" constant="12" id="0Mg-rt-jRT"/>
+                            <constraint firstItem="mQL-CL-IYB" firstAttribute="top" secondItem="0ED-9j-WuA" secondAttribute="bottom" constant="6" id="0Mg-rt-jRT"/>
                             <constraint firstItem="mQL-CL-IYB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="4uA-Ja-IN4"/>
-                            <constraint firstItem="aiR-zp-Gij" firstAttribute="top" secondItem="Wtx-F0-ZaC" secondAttribute="bottom" constant="22" id="AwJ-Jx-eHz"/>
+                            <constraint firstItem="aiR-zp-Gij" firstAttribute="top" secondItem="Wtx-F0-ZaC" secondAttribute="bottom" constant="10" id="AwJ-Jx-eHz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mQL-CL-IYB" secondAttribute="trailing" constant="64" id="Hc2-RA-BdG"/>
                             <constraint firstItem="aiR-zp-Gij" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="KMT-eF-y4W"/>
                             <constraint firstItem="xwZ-0f-Fip" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="L0s-dQ-Nac"/>
-                            <constraint firstItem="0ED-9j-WuA" firstAttribute="top" secondItem="aiR-zp-Gij" secondAttribute="bottom" constant="55" id="OxB-iF-ncC"/>
+                            <constraint firstItem="0ED-9j-WuA" firstAttribute="top" secondItem="aiR-zp-Gij" secondAttribute="bottom" constant="10" id="OxB-iF-ncC"/>
                             <constraint firstItem="0ED-9j-WuA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="Pq0-ya-XNE"/>
                             <constraint firstItem="Wtx-F0-ZaC" firstAttribute="top" secondItem="xwZ-0f-Fip" secondAttribute="bottom" constant="10.5" id="Vh2-yo-ea2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mQL-CL-IYB" secondAttribute="bottom" constant="31" id="bIR-87-vay"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mQL-CL-IYB" secondAttribute="bottom" constant="15" id="bIR-87-vay"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0ED-9j-WuA" secondAttribute="trailing" constant="64" id="coH-cK-DOj"/>
                             <constraint firstItem="xwZ-0f-Fip" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.26" id="nWv-Mh-Wbc"/>
                             <constraint firstItem="Wtx-F0-ZaC" firstAttribute="centerX" secondItem="xwZ-0f-Fip" secondAttribute="centerX" id="uE1-dv-BZ5"/>
@@ -129,6 +129,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cloud" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="cloud" width="204.80000305175781" height="204.80000305175781"/>
     </resources>
 </document>

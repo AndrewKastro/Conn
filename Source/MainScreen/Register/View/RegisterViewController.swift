@@ -11,7 +11,8 @@ import UIKit
 //MARK: - PROTOCOL -
 
 protocol RegisterViewControllerDelegate {
-    func cancelRegister()
+    func successRegister()
+    func failRegister(_ context:Bool)
 }
 
 //MARK: - CLASS, VARIABLES, LETS & IBOUTLETS -
@@ -43,11 +44,11 @@ class RegisterViewController: UIViewController {
 extension RegisterViewController {
     
     @IBAction func actionCreateRegister(_ sender: Any) {
-        
+        self.presenter.callRegistrationService()
     }
     
     @IBAction func actionCancelRegister(_ sender: Any) {
-        self.delegate?.cancelRegister()
+        self.delegate?.failRegister(false)
     }
 }
 
@@ -81,6 +82,7 @@ extension RegisterViewController: UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
         if zipCode.tag == textField.tag {
             let currentText = textField.text ?? ""
             guard let stringRange = Range(range, in: currentText) else { return false }
@@ -106,5 +108,12 @@ extension RegisterViewController: RegisterPresenterDelegate {
         self.enabledButton(true)
         self.colorEnabledButton(false, self.createRegister)
     }
+    
+    func successCreatingUser() {
+        self.delegate?.successRegister()
+    }
  
+    func errorCreatingUser() {
+        self.delegate?.failRegister(true)
+    }
 }

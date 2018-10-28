@@ -41,7 +41,7 @@
                                                 <constraint firstAttribute="width" constant="20" id="vV1-pF-dcy"/>
                                             </constraints>
                                         </imageView>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iei-8H-gXI">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iei-8H-gXI">
                                             <rect key="frame" x="28" y="0.0" width="188" height="20"/>
                                             <accessibility key="accessibilityConfiguration" identifier="username"/>
                                             <constraints>

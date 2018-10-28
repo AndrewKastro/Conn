@@ -11,6 +11,8 @@ import Foundation
 protocol LoginPresenterDelegate {
     func validateFields(_ viewDataLogin:TextFieldsViewDataLogin)
     func verifyValidate(_ validation:Bool)
+    func successLogin()
+    func failLogin()
 }
 
 struct TextFieldsViewDataLogin {
@@ -22,6 +24,8 @@ class LoginPresenter {
     
     var delegate:LoginPresenterDelegate?
     var fieldsViewData = TextFieldsViewDataLogin()
+    
+    let service = FirebaseService()
     
     func attach(view:LoginPresenterDelegate){
         self.delegate = view
@@ -52,5 +56,16 @@ extension LoginPresenter {
     
     func verifyIdentifierAndSet(_ field:String, _ identifier:String) {
         let _ = identifier == "username" ? self.setUsername(field) : self.setPassword(field)
+    }
+}
+
+extension LoginPresenter {
+    
+    func signInUser() {
+        self.service.signInFirebase(self.fieldsViewData.username, password: self.fieldsViewData.password, errorCompletion: { (error) in
+            self.delegate?.failLogin()
+        }, successCompletion: { (success) in
+            self.delegate?.successLogin()
+        })
     }
 }
