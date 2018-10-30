@@ -25,8 +25,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var cancelLogin: UIButton!
     
-    let identifierUsername = "username"
-    let identifierPassword = "password"
     let presenter = LoginPresenter()
     let service = FirebaseService()
     
@@ -83,7 +81,10 @@ extension LoginViewController: UITextFieldDelegate {
 
 extension LoginViewController: LoginPresenterDelegate {
     func successLogin() {
-        print("FFFF APRESENTAR A TELA DE LOGIN")
+        
+        let controller = UIStoryboard.init(name: "HomeViewController", bundle: nil).instantiateViewController(withIdentifier: "homepage") as? HomeViewController
+        controller?.userNamePost = self.viewData!.username
+        self.present(controller ?? UIViewController(), animated: true, completion: nil)
     }
     
     func failLogin() {

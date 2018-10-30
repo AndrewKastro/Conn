@@ -33,9 +33,6 @@ class RegisterViewController: UIViewController {
     var viewDataRegister:TextFieldsViewDataRegister?
     
     let presenter = RegisterPresenter()
-    let username = "username"
-    let password = "password"
-    let email = "email"
 
 }
 

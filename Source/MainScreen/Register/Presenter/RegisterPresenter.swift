@@ -32,7 +32,6 @@ class RegisterPresenter {
     
     var delegate:RegisterPresenterDelegate?
     var fieldsViewData = TextFieldsViewDataRegister()
-    var fields = [TextFieldsViewDataRegister]()
     
     let service = FirebaseService()
     
