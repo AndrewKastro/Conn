@@ -18,6 +18,8 @@
 		FA72E1332188930C007851DC /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA72E1322188930C007851DC /* UserService.swift */; };
 		FA72E1382188D0DE007851DC /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA72E1362188D0DE007851DC /* PostTableViewCell.swift */; };
 		FA72E1392188D0DE007851DC /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA72E1372188D0DE007851DC /* PostTableViewCell.xib */; };
+		FA72E14D21892F81007851DC /* DescriptionPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA72E14B21892F81007851DC /* DescriptionPostViewController.swift */; };
+		FA72E1502189301F007851DC /* DescriptionPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA72E14F2189301F007851DC /* DescriptionPost.storyboard */; };
 		FA8320DC218139DA0089204D /* InitialScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8320D9218139DA0089204D /* InitialScreen.storyboard */; };
 		FA8320DD218139DA0089204D /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8320DB218139DA0089204D /* InitialScreenViewController.swift */; };
 		FA8320E221813A340089204D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8320E021813A340089204D /* LoginViewController.swift */; };
@@ -50,6 +52,8 @@
 		FA72E1322188930C007851DC /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		FA72E1362188D0DE007851DC /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		FA72E1372188D0DE007851DC /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		FA72E14B21892F81007851DC /* DescriptionPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionPostViewController.swift; sourceTree = "<group>"; };
+		FA72E14F2189301F007851DC /* DescriptionPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DescriptionPost.storyboard; sourceTree = "<group>"; };
 		FA8320DA218139DA0089204D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/InitialScreen.storyboard; sourceTree = "<group>"; };
 		FA8320DB218139DA0089204D /* InitialScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialScreenViewController.swift; sourceTree = "<group>"; };
 		FA8320E021813A340089204D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -112,9 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				FA1E06542186631700AEC60E /* View */,
-				FA1E06552186631700AEC60E /* Presenter */,
 			);
-			path = Home;
+			name = Home;
+			path = Source/Home;
 			sourceTree = SOURCE_ROOT;
 		};
 		FA1E06542186631700AEC60E /* View */ = {
@@ -124,13 +128,6 @@
 				FA1E06562186634600AEC60E /* HomeViewController.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		FA1E06552186631700AEC60E /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		FA1E065A21868FF700AEC60E /* Post */ = {
@@ -176,6 +173,24 @@
 				FA1E065F2186903100AEC60E /* Post.storyboard */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FA72E14921892F31007851DC /* DescriptionPost */ = {
+			isa = PBXGroup;
+			children = (
+				FA72E14A21892F64007851DC /* View */,
+			);
+			name = DescriptionPost;
+			path = Source/DescriptionPost;
+			sourceTree = SOURCE_ROOT;
+		};
+		FA72E14A21892F64007851DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA72E14B21892F81007851DC /* DescriptionPostViewController.swift */,
+				FA72E14F2189301F007851DC /* DescriptionPost.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FA8320D6218139DA0089204D /* InitialScreen */ = {
@@ -305,6 +320,7 @@
 				FA8A97B12180185800B0A09C /* MainScreen */,
 				FA1E0653218662FC00AEC60E /* Home */,
 				FA1E065A21868FF700AEC60E /* Post */,
+				FA72E14921892F31007851DC /* DescriptionPost */,
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;
@@ -395,6 +411,7 @@
 				FA72E1392188D0DE007851DC /* PostTableViewCell.xib in Resources */,
 				FA8320DC218139DA0089204D /* InitialScreen.storyboard in Resources */,
 				FA8A97A1217FF90500B0A09C /* LaunchScreen.storyboard in Resources */,
+				FA72E1502189301F007851DC /* DescriptionPost.storyboard in Resources */,
 				FA8A979E217FF90500B0A09C /* Assets.xcassets in Resources */,
 				FA1E064821855A0600AEC60E /* GoogleService-Info.plist in Resources */,
 			);
@@ -475,6 +492,7 @@
 				FA72E1332188930C007851DC /* UserService.swift in Sources */,
 				FA8A97A9217FF9B600B0A09C /* Gradient.swift in Sources */,
 				FA72E1382188D0DE007851DC /* PostTableViewCell.swift in Sources */,
+				FA72E14D21892F81007851DC /* DescriptionPostViewController.swift in Sources */,
 				FA8A9794217FF90400B0A09C /* AppDelegate.swift in Sources */,
 				FA1E06592186833B00AEC60E /* HomeViewController.swift in Sources */,
 			);

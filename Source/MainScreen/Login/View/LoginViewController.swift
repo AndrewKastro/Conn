@@ -81,7 +81,6 @@ extension LoginViewController: UITextFieldDelegate {
 
 extension LoginViewController: LoginPresenterDelegate {
     func successLogin() {
-        
         let controller = UIStoryboard.init(name: "HomeViewController", bundle: nil).instantiateViewController(withIdentifier: "homepage") as? HomeViewController
         controller?.userNamePost = self.viewData!.username
         self.present(controller ?? UIViewController(), animated: true, completion: nil)

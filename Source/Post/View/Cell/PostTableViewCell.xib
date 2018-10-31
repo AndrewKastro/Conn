@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" restorationIdentifier="PostCell" selectionStyle="default" indentationWidth="10" rowHeight="115" id="KGk-i7-Jjw" customClass="PostTableViewCell" customModule="Conn" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="PostCell" selectionStyle="none" indentationWidth="10" rowHeight="115" id="KGk-i7-Jjw" customClass="PostTableViewCell" customModule="Conn" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="134"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -19,45 +19,72 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iox-06-tET">
-                        <rect key="frame" x="40" y="0.0" width="240" height="133.5"/>
+                        <rect key="frame" x="40" y="10" width="240" height="123.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtM-bh-jaG">
-                                <rect key="frame" x="105" y="5" width="30" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="optional field" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7k-1g-3BW">
+                                <rect key="frame" x="25" y="31" width="190" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="YJW-Jk-Vma"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="optional field" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7k-1g-3BW">
-                                <rect key="frame" x="85" y="32" width="69" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="optional field 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxQ-pd-4uK">
+                                <rect key="frame" x="25" y="53" width="190" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="OaT-AT-hQg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="optional field 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxQ-pd-4uK">
-                                <rect key="frame" x="80" y="58" width="79" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="optional field 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQE-bb-I3Z">
+                                <rect key="frame" x="25" y="75" width="190" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="Zkg-nr-VWO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="optional field 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQE-bb-I3Z">
-                                <rect key="frame" x="80" y="82" width="79" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="theme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4h-dK-lXv">
+                                <rect key="frame" x="25" y="97" width="190" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="Ufe-l9-huY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4h-dK-lXv">
-                                <rect key="frame" x="103" y="102" width="33" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtM-bh-jaG">
+                                <rect key="frame" x="25" y="8" width="190" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="nEM-Z6-9RX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.086274509799999996" green="0.58823529409999997" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SQE-bb-I3Z" secondAttribute="trailing" constant="25" id="KqI-JY-zeh"/>
+                            <constraint firstItem="WxQ-pd-4uK" firstAttribute="leading" secondItem="Iox-06-tET" secondAttribute="leading" constant="25" id="SNj-W2-ewC"/>
+                            <constraint firstItem="J4h-dK-lXv" firstAttribute="top" secondItem="SQE-bb-I3Z" secondAttribute="bottom" constant="8" id="VRQ-TL-Sec"/>
+                            <constraint firstItem="Y7k-1g-3BW" firstAttribute="top" secondItem="gtM-bh-jaG" secondAttribute="bottom" constant="5" id="Vfx-3f-bwu"/>
+                            <constraint firstItem="gtM-bh-jaG" firstAttribute="top" secondItem="Iox-06-tET" secondAttribute="top" constant="8" id="VwB-gX-d6H"/>
+                            <constraint firstItem="SQE-bb-I3Z" firstAttribute="top" secondItem="WxQ-pd-4uK" secondAttribute="bottom" constant="8" id="YDK-lD-of3"/>
+                            <constraint firstItem="WxQ-pd-4uK" firstAttribute="top" secondItem="Y7k-1g-3BW" secondAttribute="bottom" constant="8" id="ZRq-iA-R7B"/>
+                            <constraint firstAttribute="trailing" secondItem="Y7k-1g-3BW" secondAttribute="trailing" constant="25" id="bBY-Oi-Vaq"/>
+                            <constraint firstAttribute="trailing" secondItem="gtM-bh-jaG" secondAttribute="trailing" constant="25" id="cIO-GH-OgV"/>
+                            <constraint firstItem="J4h-dK-lXv" firstAttribute="leading" secondItem="Iox-06-tET" secondAttribute="leading" constant="25" id="fOB-Kp-NTe"/>
+                            <constraint firstAttribute="trailing" secondItem="WxQ-pd-4uK" secondAttribute="trailing" constant="25" id="jMn-oO-xfe"/>
+                            <constraint firstAttribute="trailing" secondItem="J4h-dK-lXv" secondAttribute="trailing" constant="25" id="leT-OD-VS9"/>
+                            <constraint firstItem="Y7k-1g-3BW" firstAttribute="leading" secondItem="Iox-06-tET" secondAttribute="leading" constant="25" id="sVH-r2-hKD"/>
+                            <constraint firstItem="SQE-bb-I3Z" firstAttribute="leading" secondItem="Iox-06-tET" secondAttribute="leading" constant="25" id="vTr-sc-ttk"/>
+                            <constraint firstItem="gtM-bh-jaG" firstAttribute="leading" secondItem="Iox-06-tET" secondAttribute="leading" constant="25" id="zY8-pc-XuR"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="16"/>
@@ -68,7 +95,7 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Iox-06-tET" secondAttribute="bottom" id="1jY-Fd-QF3"/>
-                    <constraint firstItem="Iox-06-tET" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2eh-vE-5dQ"/>
+                    <constraint firstItem="Iox-06-tET" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="2eh-vE-5dQ"/>
                     <constraint firstItem="Iox-06-tET" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="98g-ky-lEP"/>
                     <constraint firstAttribute="trailing" secondItem="Iox-06-tET" secondAttribute="trailing" constant="40" id="bSh-5i-ia8"/>
                 </constraints>

@@ -49,8 +49,6 @@ extension PostPresenter {
     func verifyViewData() -> Bool{
         if !self.postViewData.title.isEmpty, !self.postViewData.optionalField.isEmpty, !self.postViewData.secondOptionalField.isEmpty, !self.postViewData.thirdOptionalField.isEmpty, !self.postViewData.theme.isEmpty {
             return true
-        }else if !self.postViewData.title.isEmpty, !self.postViewData.theme.isEmpty {
-            return true
         }
         return false
     }

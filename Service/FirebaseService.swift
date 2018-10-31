@@ -50,21 +50,24 @@ class FirebaseService {
     }
     
     func signInFirebase(_ email:String, password:String, errorCompletion:@escaping(_ error:String) -> Void, successCompletion:@escaping(_ success:String) -> Void){
-//        Auth.auth().signIn(withEmail: email, password: password) { user, error in
-//            if error == nil && user != nil {
-//                successCompletion(self.successCreate)
-//            }else {
-//                errorCompletion(self.errorCreate)
-//            }
-//        }
+        Auth.auth().signIn(withEmail: email, password: password) { user, error in
+            if error == nil && user != nil {
+                successCompletion(self.successCreate)
+            }else {
+                errorCompletion(self.errorCreate)
+            }
+        }
+    }
+    
+    static func automaticSignInFirebase( errorCompletion:@escaping(_ error:String) -> Void, successCompletion:@escaping(_ success:String) -> Void) {
         let _ = Auth.auth().addStateDidChangeListener{ auth, user in
             if user != nil {
                 UserService.observeUserProfile((user?.uid)!) { userProfile in
                     UserService.currentUserProfile = userProfile
                 }
-                successCompletion(self.successCreate)
+                successCompletion("SUCCESS")
             }else {
-                errorCompletion(self.errorCreate)
+                errorCompletion("ERROR")
             }
         }
     }
