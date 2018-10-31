@@ -10,11 +10,11 @@ import Foundation
 
 class Post {
     
-    var title:String
-    var theme:String
-    var optionalField:String
-    var secondOptionalField:String
-    var thirdOptionalField:String
+    var title:String?
+    var theme:String?
+    var optionalField:String?
+    var secondOptionalField:String?
+    var thirdOptionalField:String?
     
     init(title:String, theme:String, optionalField:String, secondOptionalField:String, thirdOptionalField:String) {
         self.title = title

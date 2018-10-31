@@ -57,8 +57,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = UIStoryboard.init(name: "DescriptionPost", bundle: nil).instantiateViewController(withIdentifier: "descriptionPost") as? DescriptionPostViewController
-        self.present(controller!, animated: true, completion: nil)
+        if let controller = UIStoryboard.init(name: "DescriptionPost", bundle: nil).instantiateViewController(withIdentifier: "descriptionPost") as? DescriptionPostViewController {
+        controller.detailsPost = posts[indexPath.row]
+        self.present(controller, animated: true, completion: nil)
+        }
     }
 }
 
