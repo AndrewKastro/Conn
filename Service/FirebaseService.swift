@@ -104,7 +104,7 @@ class FirebaseService {
             return
         }
         
-        let postReference = Database.database().reference().child("comments").childByAutoId()
+        let postReference = Database.database().reference().child("posts/comments").childByAutoId()
         let postObject = [
             "wrote": commment,
             "timestamp": [".sv":"timestamp"]

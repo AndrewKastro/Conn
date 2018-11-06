@@ -20,4 +20,7 @@ class CommentsTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func setValues(comment:Comment){
+        self.comment.text = comment.comment
+    }
 }

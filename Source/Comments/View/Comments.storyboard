@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Comments View Controller-->
+        <scene sceneID="p80-YJ-lKC">
+            <objects>
+                <viewController storyboardIdentifier="comments" useStoryboardIdentifierAsRestorationIdentifier="YES" id="doQ-pZ-3JE" customClass="CommentsViewController" customModule="Conn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i22-Eo-zR2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dxv-g5-lII">
+                                <rect key="frame" x="58" y="284" width="259" height="119"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiS-HF-qBC">
+                                        <rect key="frame" x="10" y="8" width="20" height="20"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="Pgy-20-cc6"/>
+                                            <constraint firstAttribute="height" constant="20" id="e2O-f4-E7t"/>
+                                        </constraints>
+                                        <state key="normal" image="cancel">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="back:" destination="doQ-pZ-3JE" eventType="touchUpInside" id="mJs-pQ-jrd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVs-xx-gJE">
+                                        <rect key="frame" x="228" y="8" width="20" height="20"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="S8A-q3-TNv"/>
+                                            <constraint firstAttribute="width" constant="20" id="c4s-2f-gOI"/>
+                                        </constraints>
+                                        <state key="normal" image="addComments"/>
+                                        <connections>
+                                            <action selector="addComment:" destination="doQ-pZ-3JE" eventType="touchUpInside" id="v4e-AB-wCM"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6k9-kl-oaz">
+                                        <rect key="frame" x="10" y="39" width="238" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="aMT-m2-Bgi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.58823529409999997" blue="0.62352941179999999" alpha="0.55000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="6k9-kl-oaz" secondAttribute="bottom" constant="20" id="1Le-fv-5Yi"/>
+                                    <constraint firstAttribute="trailing" secondItem="6k9-kl-oaz" secondAttribute="trailing" constant="11" id="9Fp-mP-NOK"/>
+                                    <constraint firstItem="oVs-xx-gJE" firstAttribute="trailing" secondItem="6k9-kl-oaz" secondAttribute="trailing" id="Awf-IW-ua8"/>
+                                    <constraint firstAttribute="width" constant="259" id="IWq-V5-Oqg"/>
+                                    <constraint firstItem="SiS-HF-qBC" firstAttribute="leading" secondItem="6k9-kl-oaz" secondAttribute="leading" id="V2P-kF-Pej"/>
+                                    <constraint firstItem="SiS-HF-qBC" firstAttribute="top" secondItem="Dxv-g5-lII" secondAttribute="top" constant="8" id="VJP-0z-lZv"/>
+                                    <constraint firstItem="oVs-xx-gJE" firstAttribute="top" secondItem="Dxv-g5-lII" secondAttribute="top" constant="8" id="eEa-2u-4HH"/>
+                                    <constraint firstAttribute="height" constant="119" id="ren-Ts-T7L"/>
+                                    <constraint firstItem="6k9-kl-oaz" firstAttribute="leading" secondItem="Dxv-g5-lII" secondAttribute="leading" constant="10" id="vWP-wY-3qQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30226873069999999" green="0.66646731469999998" blue="0.639582494" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dxv-g5-lII" firstAttribute="centerY" secondItem="C6N-VC-7Di" secondAttribute="centerY" id="PRW-KT-Dax"/>
+                            <constraint firstItem="Dxv-g5-lII" firstAttribute="centerX" secondItem="C6N-VC-7Di" secondAttribute="centerX" id="TLj-QO-uGc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C6N-VC-7Di"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZQV-kf-wWK"/>
+                    <connections>
+                        <outlet property="commentTextView" destination="6k9-kl-oaz" id="wtL-xP-ott"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9f0-6c-KuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2060.8695652173915" y="251.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="addComments" width="204.80000305175781" height="204.80000305175781"/>
+        <image name="cancel" width="204.80000305175781" height="204.80000305175781"/>
+    </resources>
+</document>

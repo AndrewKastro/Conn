@@ -67,7 +67,7 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="add"/>
                                         <connections>
-                                            <segue destination="JER-4H-bHE" kind="show" identifier="postViewController" id="bsh-P9-9mg"/>
+                                            <segue destination="JER-4H-bHE" kind="presentation" identifier="postViewController" id="bsh-P9-9mg"/>
                                         </connections>
                                     </button>
                                 </subviews>
