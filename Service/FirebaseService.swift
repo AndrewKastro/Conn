@@ -97,4 +97,25 @@ class FirebaseService {
             }
         })
     }
+    
+    func createComment(_ commment:String, errorCompletion:@escaping(_ error:String) -> Void, successCompletion:@escaping(_ success:String) -> Void){
+        
+        guard let _ = UserService.currentUserProfile else {
+            return
+        }
+        
+        let postReference = Database.database().reference().child("comments").childByAutoId()
+        let postObject = [
+            "wrote": commment,
+            "timestamp": [".sv":"timestamp"]
+            ] as [String:Any]
+        
+        postReference.setValue(postObject, withCompletionBlock: { error, ref in
+            if error == nil {
+                successCompletion(self.successCreate)
+            }else {
+                errorCompletion(self.errorCreate)
+            }
+        })
+    }
 }

@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var createPost: UIButton!
     
+    let service = FirebaseService()
     let CellNameID = "PostTableViewCell"
     var userNamePost = ""
     var posts = [Post]()

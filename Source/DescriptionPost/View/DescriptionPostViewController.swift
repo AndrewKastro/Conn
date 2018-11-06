@@ -22,10 +22,6 @@ class DescriptionPostViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func addComment(_ sender: Any) {
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

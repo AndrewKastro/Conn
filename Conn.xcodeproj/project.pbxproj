@@ -14,6 +14,9 @@
 		FA1E06592186833B00AEC60E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E06582186833B00AEC60E /* HomeViewController.swift */; };
 		FA1E065E2186902400AEC60E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E065D2186902400AEC60E /* PostViewController.swift */; };
 		FA1E06602186903100AEC60E /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1E065F2186903100AEC60E /* Post.storyboard */; };
+		FA3E1E6A2191DC9600FA9440 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3E1E682191DC9600FA9440 /* CommentsTableViewCell.swift */; };
+		FA3E1E6B2191DC9600FA9440 /* CommentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3E1E692191DC9600FA9440 /* CommentsTableViewCell.xib */; };
+		FA3E1E6D2191DF6D00FA9440 /* CommentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3E1E6C2191DF6D00FA9440 /* CommentsPresenter.swift */; };
 		FA72E1312188929A007851DC /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA72E1302188929A007851DC /* UserProfile.swift */; };
 		FA72E1332188930C007851DC /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA72E1322188930C007851DC /* UserService.swift */; };
 		FA72E1382188D0DE007851DC /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA72E1362188D0DE007851DC /* PostTableViewCell.swift */; };
@@ -35,6 +38,7 @@
 		FA8A97A9217FF9B600B0A09C /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A97A8217FF9B500B0A09C /* Gradient.swift */; };
 		FA8A97AB21800B3800B0A09C /* Extension+IBDesignalbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A97AA21800B3800B0A09C /* Extension+IBDesignalbe.swift */; };
 		FA99B6792187FF130060A26C /* PostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99B6782187FF130060A26C /* PostPresenter.swift */; };
+		FAA97192218A3E79003A0169 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA97191218A3E79003A0169 /* CommentsViewController.swift */; };
 		FAE657AC218527A000D754E6 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE657AB218527A000D754E6 /* FirebaseService.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +52,9 @@
 		FA1E06582186833B00AEC60E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA1E065D2186902400AEC60E /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		FA1E065F2186903100AEC60E /* Post.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
+		FA3E1E682191DC9600FA9440 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
+		FA3E1E692191DC9600FA9440 /* CommentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsTableViewCell.xib; sourceTree = "<group>"; };
+		FA3E1E6C2191DF6D00FA9440 /* CommentsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsPresenter.swift; sourceTree = "<group>"; };
 		FA72E1302188929A007851DC /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		FA72E1322188930C007851DC /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		FA72E1362188D0DE007851DC /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
@@ -71,6 +78,7 @@
 		FA8A97A8217FF9B500B0A09C /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		FA8A97AA21800B3800B0A09C /* Extension+IBDesignalbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+IBDesignalbe.swift"; sourceTree = "<group>"; };
 		FA99B6782187FF130060A26C /* PostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPresenter.swift; sourceTree = "<group>"; };
+		FAA97191218A3E79003A0169 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		FAE657AB218527A000D754E6 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -321,6 +329,7 @@
 				FA1E0653218662FC00AEC60E /* Home */,
 				FA1E065A21868FF700AEC60E /* Post */,
 				FA72E14921892F31007851DC /* DescriptionPost */,
+				FAA9718E218A3E49003A0169 /* Comments */,
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;
@@ -333,6 +342,34 @@
 				FA8320DF21813A050089204D /* Register */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		FAA9718E218A3E49003A0169 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				FAA97190218A3E49003A0169 /* View */,
+				FAA9718F218A3E49003A0169 /* Presenter */,
+			);
+			name = Comments;
+			path = Source/Comments;
+			sourceTree = SOURCE_ROOT;
+		};
+		FAA9718F218A3E49003A0169 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FA3E1E6C2191DF6D00FA9440 /* CommentsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FAA97190218A3E49003A0169 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAA97191218A3E79003A0169 /* CommentsViewController.swift */,
+				FA3E1E682191DC9600FA9440 /* CommentsTableViewCell.swift */,
+				FA3E1E692191DC9600FA9440 /* CommentsTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FAE657AA218526F200D754E6 /* Service */ = {
@@ -404,6 +441,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3E1E6B2191DC9600FA9440 /* CommentsTableViewCell.xib in Resources */,
 				FA8320E321813A340089204D /* LoginViewController.xib in Resources */,
 				FA1E06602186903100AEC60E /* Post.storyboard in Resources */,
 				FA8320E9218143980089204D /* RegisterViewController.xib in Resources */,
@@ -484,9 +522,12 @@
 				FA1E065E2186902400AEC60E /* PostViewController.swift in Sources */,
 				FA8A97AB21800B3800B0A09C /* Extension+IBDesignalbe.swift in Sources */,
 				FA8320E8218143980089204D /* RegisterViewController.swift in Sources */,
+				FA3E1E6A2191DC9600FA9440 /* CommentsTableViewCell.swift in Sources */,
+				FAA97192218A3E79003A0169 /* CommentsViewController.swift in Sources */,
 				FA99B6792187FF130060A26C /* PostPresenter.swift in Sources */,
 				FA8320EF21816F050089204D /* RegisterPresenter.swift in Sources */,
 				FA8A979C217FF90400B0A09C /* Conn.xcdatamodeld in Sources */,
+				FA3E1E6D2191DF6D00FA9440 /* CommentsPresenter.swift in Sources */,
 				FAE657AC218527A000D754E6 /* FirebaseService.swift in Sources */,
 				FA8320DD218139DA0089204D /* InitialScreenViewController.swift in Sources */,
 				FA72E1332188930C007851DC /* UserService.swift in Sources */,
